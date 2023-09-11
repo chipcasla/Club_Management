@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 
 
 namespace Datos
@@ -14,8 +15,7 @@ namespace Datos
         public static SqlConnection connection = null;
         public static SqlConnection openConection()
         {
-            string connectionString = "Data Source=MS-10\\SQLEXPRESS;Initial Catalog=db_club;User ID=net;Password=net";
-
+            string connectionString = "Data Source=MS-11\\SQLEXPRESS;Initial Catalog=db_club;User ID=net;Password=net";
            
             try
             {
@@ -23,7 +23,12 @@ namespace Datos
                 {
                     connection = new SqlConnection(connectionString);
                     connection.Open();
+
                     Console.WriteLine("Conexión exitosa a la base de datos.");
+                }
+                else if (connection.State == ConnectionState.Closed)
+                {
+                    connection.Open(); // Abre la conexión si está cerrada
                 }
             }
             catch (Exception ex)
@@ -34,7 +39,7 @@ namespace Datos
             return connection;
         }
 
-        static void CloseConnection(SqlConnection connection)
+        public static void closeConnection(SqlConnection connection)
         {
             try
             {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iVlKk3PfjC1cEe/9MB83gLuNnyRXEkp9fw8AOaDSTr+cIWIlmKdPKHpBZjf1wvXtXG1KKD5EKJeF0vsmcYc4uw==",
+  "dgSpecHash": "aS+G5Qy57zWoFELmsLJUrn2UhxXy7eiWMw4s0s3sOyjNVNkWhah1JOhIK2V2gmMDCV9gRVM/JGy25sbdu0/iNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Negocio\\Negocio.csproj",
+  "projectFilePath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Negocio\\Negocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALUMNO\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ALUMNO\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

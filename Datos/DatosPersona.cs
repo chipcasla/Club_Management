@@ -37,6 +37,8 @@ namespace Datos
                     }
                 }
             }
+            Conexion.closeConnection(connection);
+
 
             return personaEncontrada;
         }
