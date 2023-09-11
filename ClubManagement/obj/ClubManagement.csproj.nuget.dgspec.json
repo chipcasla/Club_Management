@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\ClubManagement\\ClubManagement.csproj": {}
+    "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\ClubManagement\\ClubManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\ClubManagement\\ClubManagement.csproj": {
+    "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\ClubManagement\\ClubManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\ClubManagement\\ClubManagement.csproj",
+        "projectUniqueName": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\ClubManagement\\ClubManagement.csproj",
         "projectName": "ClubManagement",
-        "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\ClubManagement\\ClubManagement.csproj",
+        "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\ClubManagement\\ClubManagement.csproj",
         "packagesPath": "C:\\Users\\ALUMNO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\ClubManagement\\obj\\",
+        "outputPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\ClubManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Datos\\Datos.csproj"
+              "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Datos\\Datos.csproj"
               },
-              "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj"
+              "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj"
               },
-              "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Negocio\\Negocio.csproj": {
-                "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Negocio\\Negocio.csproj"
+              "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Negocio\\Negocio.csproj": {
+                "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Negocio\\Negocio.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Datos\\Datos.csproj": {
+    "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Datos\\Datos.csproj",
+        "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Datos\\Datos.csproj",
         "packagesPath": "C:\\Users\\ALUMNO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Datos\\obj\\",
+        "outputPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -112,8 +112,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj"
+              "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -153,14 +153,14 @@
         }
       }
     },
-    "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\ALUMNO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -219,14 +219,14 @@
         }
       }
     },
-    "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Negocio\\Negocio.csproj": {
+    "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Negocio\\Negocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Negocio\\Negocio.csproj",
+        "projectUniqueName": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Negocio\\Negocio.csproj",
         "projectName": "Negocio",
-        "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Negocio\\Negocio.csproj",
+        "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Negocio\\Negocio.csproj",
         "packagesPath": "C:\\Users\\ALUMNO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Negocio\\obj\\",
+        "outputPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Negocio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -248,11 +248,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Datos\\Datos.csproj"
+              "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Datos\\Datos.csproj"
               },
-              "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\ALUMNO\\Documents\\net\\Unidad04\\Entidades\\Entidades.csproj"
+              "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\ALUMNO\\source\\repos\\.NET-Chipineta\\Club_Management-main\\Entidades\\Entidades.csproj"
               }
             }
           }
