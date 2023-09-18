@@ -32,3 +32,5 @@ C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Negocio\obj\Deb
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Negocio\obj\Debug\net6.0\refint\Negocio.dll
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.pdb
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Negocio\obj\Debug\net6.0\ref\Negocio.dll
+C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Negocio\bin\Debug\net6.0\Negocio.runtimeconfig.json
+C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.genruntimeconfig.cache
