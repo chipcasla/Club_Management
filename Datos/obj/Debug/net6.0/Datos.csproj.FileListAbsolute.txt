@@ -28,3 +28,5 @@ C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Datos\obj\Debug
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Datos\obj\Debug\net6.0\refint\Datos.dll
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Datos\obj\Debug\net6.0\Datos.pdb
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Datos\obj\Debug\net6.0\ref\Datos.dll
+C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Datos\bin\Debug\net6.0\Datos.runtimeconfig.json
+C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\Datos\obj\Debug\net6.0\Datos.genruntimeconfig.cache
