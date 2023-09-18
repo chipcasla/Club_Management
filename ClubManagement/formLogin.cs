@@ -30,9 +30,9 @@ namespace ClubManagement
                 Persona p = pers.validarInicio(this.txtDNI.Text , this.txtPass.Text);
                 if(p != null)
                 {
-                    this.lblValidar.Visible = true;
-                    this.lblValidar.ForeColor = Color.Green;
-                    this.lblValidar.Text = "Hola "+p.getNombre()+" "+p.getApellido()+" bienvenido";
+                    this.Hide();
+                    formMenu formMenup = new formMenu();
+                    formMenup.ShowDialog();
                 }
                 else
                 {

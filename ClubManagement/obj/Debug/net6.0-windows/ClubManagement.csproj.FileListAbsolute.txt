@@ -60,3 +60,6 @@ C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\ClubManagement\
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.pdb
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.genruntimeconfig.cache
 C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\ClubManagement\obj\Debug\net6.0-windows\ref\ClubManagement.dll
+C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\ClubManagement\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
+C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\ClubManagement\bin\Debug\net6.0-windows\EntityFramework.dll
+C:\Users\ALUMNO\source\repos\.NET-Chipineta\Club_Management-main\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.formMenu.resources

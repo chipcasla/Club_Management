@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entidades;
+using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -171,5 +173,32 @@ namespace ClubManagement
                 this.btnAceptar.Enabled = false;
             }
         }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            ABMpersonas pers = new ABMpersonas();
+            Persona p = new Persona(int.Parse(txtDNI.Text), txtNombre.Text, txtApellido.Text, txtMail.Text, txtPass.Text);
+            int v = pers.add(p);
+            if (v == 1)
+            {
+                lblValidar.Visible = true;
+                lblValidar.Text = "Registro exitoso! Presione ingresar para iniciar sesión.";
+                lblValidar.ForeColor = Color.Green;
+            }
+            else if (v == 2)
+            {
+                lblValidar.Visible = true;
+                lblValidar.Text = "Este DNI ya está registrado.\nPresione ingresar para iniciar sesión.";
+                lblValidar.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblValidar.Visible = true;
+                lblValidar.Text = "Ocurrio un error en el registro. Vuelva a intentar.";
+                lblValidar.ForeColor = Color.Red;
+            }
+        }
+
+        
     }
 }
