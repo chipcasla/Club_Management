@@ -46,7 +46,7 @@ namespace Datos
 
         public Persona getPersona(string dni, string password)
         {
-            Persona personaEncontrada = new Persona();
+            Persona personaEncontrada = null;
             //Abrir conexion
 
             SqlConnection connection = Conexion.openConection();
@@ -61,15 +61,25 @@ namespace Datos
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.Read())
+                    try
                     {
-                        string nombre = reader["nombre"].ToString();
-                        string apellido = reader["apellido"].ToString();
-                        int numDoc = int.Parse(reader["dni"].ToString());
-                        string pass = reader["password"].ToString();
-                        string mail = reader["email"].ToString();
+                        if (reader.Read())
+                        {
+                            string nombre = reader["nombre"].ToString();
+                            string apellido = reader["apellido"].ToString();
+                            int numDoc = int.Parse(reader["dni"].ToString());
+                            string pass = reader["password"].ToString();
+                            string mail = reader["email"].ToString();
 
-                        personaEncontrada = new Persona(numDoc, nombre, apellido, mail, pass);
+                            personaEncontrada = new Persona(numDoc, nombre, apellido, mail, pass);
+                            System.Diagnostics.Debug.WriteLine("BIEN");
+                        }
+                    }
+                    catch 
+                    { 
+                        Conexion.closeConnection(connection);
+                        System.Diagnostics.Debug.WriteLine("MAL");
+                        return null;
                     }
                 }
             }
