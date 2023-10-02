@@ -22,5 +22,12 @@ namespace ClubManagement
             formLogin formIngreso = new formLogin();
             formIngreso.ShowDialog();
         }
+
+        private void btn_menu_salir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formLogin formIngreso = new formLogin();
+            formIngreso.ShowDialog();
+        }
     }
 }
