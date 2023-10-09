@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Net;
+using System.Reflection.PortableExecutable;
 
 namespace Datos
 {
@@ -77,6 +78,49 @@ namespace Datos
                     }
                     catch 
                     { 
+                        Conexion.closeConnection(connection);
+                        System.Diagnostics.Debug.WriteLine("MAL");
+                        return null;
+                    }
+                }
+            }
+            Conexion.closeConnection(connection);
+
+            return personaEncontrada;
+        }
+
+        public Persona getPersonaByDNI(string dni)
+        {
+            Persona personaEncontrada = null;
+            //Abrir conexion
+
+            SqlConnection connection = Conexion.openConection();
+
+            // Consulta SQL para buscar la persona por DNI y contraseña
+            string query = "SELECT * FROM personas p WHERE p.dni=@DNI";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@DNI", dni);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    try
+                    {
+                        if (reader.Read())
+                        {
+                            string nombre = reader["nombre"].ToString();
+                            string apellido = reader["apellido"].ToString();
+                            int numDoc = int.Parse(reader["dni"].ToString());
+                            string pass = reader["password"].ToString();
+                            string mail = reader["email"].ToString();
+
+                            personaEncontrada = new Persona(numDoc, nombre, apellido, mail, "");
+                            System.Diagnostics.Debug.WriteLine("BIEN");
+                        }
+                    }
+                    catch
+                    {
                         Conexion.closeConnection(connection);
                         System.Diagnostics.Debug.WriteLine("MAL");
                         return null;

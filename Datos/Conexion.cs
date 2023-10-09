@@ -19,14 +19,11 @@ namespace Datos
            
             try
             {
-                if(connection == null)
-                {
-                    connection = new SqlConnection(connectionString);
-                    connection.Open();
+                connection = new SqlConnection(connectionString);
+                connection.Open();
 
-                    Console.WriteLine("Conexión exitosa a la base de datos.");
-                }
-                else if (connection.State == ConnectionState.Closed)
+                Console.WriteLine("Conexión exitosa a la base de datos.");
+                if (connection.State == ConnectionState.Closed)
                 {
                     connection.Open(); // Abre la conexión si está cerrada
                 }
