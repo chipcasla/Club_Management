@@ -60,6 +60,7 @@
             btn_menu_reserva.TabIndex = 2;
             btn_menu_reserva.Text = "Reservas";
             btn_menu_reserva.UseVisualStyleBackColor = true;
+            btn_menu_reserva.Click += btn_menu_reserva_Click;
             // 
             // btn_menu_cuotas
             // 

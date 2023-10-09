@@ -29,5 +29,12 @@ namespace ClubManagement
             formLogin formIngreso = new formLogin();
             formIngreso.ShowDialog();
         }
+
+        private void btn_menu_reserva_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormReservas formReservas = new FormReservas();
+            formReservas.ShowDialog();
+        }
     }
 }
