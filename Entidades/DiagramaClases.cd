@@ -10,12 +10,11 @@
   <Class Name="Entidades.Actividad">
     <Position X="4.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAgAEBAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAIAAAAAAAAAEBAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Actividad.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Entrenamiento" />
-      <Property Name="Instalacion" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Entidades.Entrenamiento">
@@ -39,27 +38,26 @@
   <Class Name="Entidades.Instalacion">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Instalacion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Turno">
     <Position X="9" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAAAAA=</HashCode>
       <FileName>Turno.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entidades.Reserva">
     <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAEA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAEBAAAAAg=</HashCode>
       <FileName>Reserva.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Turno" />
       <Property Name="Persona" />
-      <Property Name="Actividad" />
+      <Property Name="Instalacion" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Entidades.Cuota">

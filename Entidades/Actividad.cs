@@ -8,16 +8,17 @@ namespace Entidades
     public class Actividad
     {
         private int idActividad;
-        private int descripcion;
-        private int costo;
+        private string descripcion;
+        private float costo;
 
-        public Entrenamiento Entrenamiento {
-            get => default;
-            set {
-            }
+        public Actividad(int iIdActividad, string iDescripcion, float iCosto)
+        {
+            idActividad = iIdActividad;
+            descripcion = iDescripcion;
+            costo = iCosto;
         }
 
-        public Instalacion Instalacion {
+        public Entrenamiento Entrenamiento {
             get => default;
             set {
             }

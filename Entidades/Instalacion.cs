@@ -8,6 +8,14 @@ namespace Entidades
     public class Instalacion
     {
         private int idInstalacion;
-        private int descripcion;
+        private string descripcion;
+
+        public Instalacion(int iIdInstalacion, string iDescripcion, Actividad actividad)
+        {
+            idInstalacion = iIdInstalacion;
+            descripcion = iDescripcion;
+            Actividad = actividad;
+        }
+        public Actividad Actividad { get; set; }
     }
 }

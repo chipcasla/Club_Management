@@ -7,11 +7,19 @@ namespace Entidades
 {
     public class Reserva
     {
-        public Turno Turno {
-            get => default;
-            set {
-            }
+        public Reserva(int id, string estado, DateTime turno, Persona persona , Instalacion instalacion)
+        {
+            Id = id;
+            Estado = estado;
+            Turno = turno;
+            Persona = persona;
+            Instalacion = instalacion;
         }
+        public int Id { get; set; }
+        public string Estado { get; set; }
+
+        public DateTime Turno { get; set; }
+
 
         public Persona Persona {
             get => default;
@@ -19,7 +27,7 @@ namespace Entidades
             }
         }
 
-        public Actividad Actividad {
+        public Instalacion Instalacion {
             get => default;
             set {
             }

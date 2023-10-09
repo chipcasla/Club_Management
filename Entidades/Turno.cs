@@ -7,5 +7,7 @@ namespace Entidades
 {
     public class Turno
     {
+        private int fechaHora;
+        private int idTurno;
     }
 }
