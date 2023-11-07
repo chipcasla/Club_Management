@@ -31,6 +31,10 @@
             components = new System.ComponentModel.Container();
             reservaBindingSource = new BindingSource(components);
             dataGridViewCuotas = new DataGridView();
+            mes = new DataGridViewTextBoxColumn();
+            anio = new DataGridViewTextBoxColumn();
+            monto = new DataGridViewTextBoxColumn();
+            pago = new DataGridViewTextBoxColumn();
             cuotaBindingSource2 = new BindingSource(components);
             cuotaBindingSource1 = new BindingSource(components);
             cuotaBindingSource = new BindingSource(components);
@@ -39,10 +43,6 @@
             btnAtras = new Button();
             lblCuotas = new Label();
             cbAnio = new ComboBox();
-            mes = new DataGridViewTextBoxColumn();
-            anio = new DataGridViewTextBoxColumn();
-            monto = new DataGridViewTextBoxColumn();
-            pago = new DataGridViewTextBoxColumn();
             lblFiltro = new Label();
             ((System.ComponentModel.ISupportInitialize)reservaBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCuotas).BeginInit();
@@ -62,11 +62,44 @@
             dataGridViewCuotas.Columns.AddRange(new DataGridViewColumn[] { mes, anio, monto, pago });
             dataGridViewCuotas.Location = new Point(98, 74);
             dataGridViewCuotas.Name = "dataGridViewCuotas";
+            dataGridViewCuotas.ReadOnly = true;
             dataGridViewCuotas.RowHeadersWidth = 51;
             dataGridViewCuotas.RowTemplate.Height = 29;
             dataGridViewCuotas.Size = new Size(555, 260);
             dataGridViewCuotas.TabIndex = 0;
             dataGridViewCuotas.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // mes
+            // 
+            mes.HeaderText = "Mes";
+            mes.MinimumWidth = 6;
+            mes.Name = "mes";
+            mes.ReadOnly = true;
+            mes.Width = 125;
+            // 
+            // anio
+            // 
+            anio.HeaderText = "Año";
+            anio.MinimumWidth = 6;
+            anio.Name = "anio";
+            anio.ReadOnly = true;
+            anio.Width = 125;
+            // 
+            // monto
+            // 
+            monto.HeaderText = "Monto";
+            monto.MinimumWidth = 6;
+            monto.Name = "monto";
+            monto.ReadOnly = true;
+            monto.Width = 125;
+            // 
+            // pago
+            // 
+            pago.HeaderText = "Pago";
+            pago.MinimumWidth = 6;
+            pago.Name = "pago";
+            pago.ReadOnly = true;
+            pago.Width = 125;
             // 
             // cuotaBindingSource2
             // 
@@ -109,6 +142,7 @@
             btnAtras.TabIndex = 3;
             btnAtras.Text = "Atras";
             btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.Click += btnAtras_Click;
             // 
             // lblCuotas
             // 
@@ -129,34 +163,6 @@
             cbAnio.Size = new Size(151, 28);
             cbAnio.TabIndex = 5;
             cbAnio.Click += cbAnio_Click;
-            // 
-            // mes
-            // 
-            mes.HeaderText = "Mes";
-            mes.MinimumWidth = 6;
-            mes.Name = "mes";
-            mes.Width = 125;
-            // 
-            // anio
-            // 
-            anio.HeaderText = "Año";
-            anio.MinimumWidth = 6;
-            anio.Name = "anio";
-            anio.Width = 125;
-            // 
-            // monto
-            // 
-            monto.HeaderText = "Monto";
-            monto.MinimumWidth = 6;
-            monto.Name = "monto";
-            monto.Width = 125;
-            // 
-            // pago
-            // 
-            pago.HeaderText = "Pago";
-            pago.MinimumWidth = 6;
-            pago.Name = "pago";
-            pago.Width = 125;
             // 
             // lblFiltro
             // 

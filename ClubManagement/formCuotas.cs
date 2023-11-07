@@ -71,5 +71,13 @@ namespace ClubManagement
         {
 
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formMenu formMenup = Application.OpenForms["formMenu"] as formMenu;
+            formMenup.Show();
+            this.Close();
+        }
     }
 }
