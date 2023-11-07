@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AmBkq+hkjScuuJwtZAZkxxTpUtpkNtBZcntLFaH1RW27CSHJ3iWkpV1OKZor95rWiupTdczo1+dQfFjKOw0wiA==",
+  "dgSpecHash": "tRQbWip2eqk5fN6DWGMX9AR7PP7yqe3DblSrSVoRN2e6gc/2IJ5H2eZYSLwsfd1e+VbvGmzGMy0tcYPXBgoQIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj",
+  "projectFilePath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomas\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

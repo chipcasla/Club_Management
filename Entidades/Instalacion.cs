@@ -16,6 +16,10 @@ namespace Entidades
             descripcion = iDescripcion;
             Actividad = actividad;
         }
+        public string getDescripcion()
+        {
+            return this.descripcion;
+        }
         public Actividad Actividad { get; set; }
     }
 }

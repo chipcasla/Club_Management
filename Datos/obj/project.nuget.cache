@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WKs2mCw97eKI1F6oG0OuXnIw/yoitZTObiRgoGN4zyTpl4Wu7o/AmLRcn6m8T79NdI20B5VSPsfeNs6qEcWLgA==",
+  "dgSpecHash": "mv877HFDyt0skuqUuTBDi6RbRlLdXKXpg6G+o9PqZlRXjWX7URsOGqbPxGKyuNd7DMfKug48JRk4J1qtKLn/5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\Datos.csproj",
+  "projectFilePath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\Datos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomas\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

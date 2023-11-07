@@ -21,16 +21,7 @@ namespace Entidades
         public DateTime Turno { get; set; }
 
 
-        public Persona Persona {
-            get => default;
-            set {
-            }
-        }
-
-        public Instalacion Instalacion {
-            get => default;
-            set {
-            }
-        }
+        public Persona Persona { get; set; }
+        public Instalacion Instalacion { get; set; }
     }
 }

@@ -100,6 +100,48 @@ namespace Datos
             return personaEncontrada;
         }
 
+        public List<Reserva> ObtenerReservaCliente(int dni)
+        {
+            List<Reserva> reservas = new List<Reserva>();
+
+            SqlConnection connection = Conexion.openConection();
+            string query = "SELECT idReservas, estado, fechaHora , ins.idActividad , act.descripcion actDescripcion, act.costo, ins.idInstalacion, ins.descripcion insDescripcion, per.dni FROM reservas res INNER JOIN instalaciones ins on ins.idInstalacion = res.idInstalacion INNER JOIN personas per on per.dni = res.dni INNER JOIN actividades act on ins.idActividad = act.idActividad WHERE per.dni = @dni ;";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@dni", dni);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        DatosPersona datosPersona = new DatosPersona();
+                        Reserva reserva = new Reserva
+                        (
+                            int.Parse(reader["idReservas"].ToString()),
+                            reader["estado"].ToString(),
+                            (DateTime)reader["fechaHora"], // Aquí asignamos directamente el DateTime
+                            datosPersona.getPersonaByDNI(reader["dni"].ToString()),
+                            new Instalacion
+                            (
+                                int.Parse(reader["idInstalacion"].ToString()),
+                                reader["insDescripcion"].ToString(),
+                                new Actividad
+                                (
+                                    int.Parse(reader["idActividad"].ToString()),
+                                    reader["actDescripcion"].ToString(),
+                                    float.Parse(reader["costo"].ToString())
+                                )
+                            )
+                        );
+                        reservas.Add(reserva);
+                    }
+                }
+            }
+
+            Conexion.closeConnection(connection);
+
+            return reservas;
+        }
     }
 
 }

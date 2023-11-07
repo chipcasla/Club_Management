@@ -17,5 +17,9 @@ namespace Negocio
         {
             return dr.ObtenerReservas();
         }
+        public List<Reserva> consultarReservaCliente(Persona p)
+        {
+            return dr.ObtenerReservaCliente(p.getDni()) ;
+        }
     }
 }

@@ -18,10 +18,10 @@ namespace Entidades
             costo = iCosto;
         }
 
-        public Entrenamiento Entrenamiento {
-            get => default;
-            set {
-            }
+        public Entrenamiento Entrenamiento {get; set; }
+        public string getDescripcion()
+        {
+            return this.descripcion;
         }
     }
 }

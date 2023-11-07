@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "csButSoNPWY2ymYGPHNJPsvxZWnj1YpbUkKW5w68S+cOSnoW0caK+yUfANeL+o3RF1/s+4vIqyqE2+RTsfFrxw==",
+  "dgSpecHash": "5VAJeeiqMciSUF9IRlkalQ+LjzqIrdVwXWWmRUtajW01zBrbx/Ivem82d8Ijw2/Qu8sOBRWg5kqDf912hT/F+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Negocio\\Negocio.csproj",
+  "projectFilePath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Negocio\\Negocio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomas\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\tomas\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

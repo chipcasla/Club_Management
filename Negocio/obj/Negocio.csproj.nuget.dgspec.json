@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Negocio\\Negocio.csproj": {}
+    "C:\\Users\\tomas\\source\\repos\\Club_Management\\Negocio\\Negocio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\Datos.csproj": {
+    "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\Datos.csproj",
+        "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\Datos.csproj",
         "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\obj\\",
+        "outputPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj"
+              "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj",
+        "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj",
         "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\obj\\",
+        "outputPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -134,14 +134,14 @@
         }
       }
     },
-    "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Negocio\\Negocio.csproj": {
+    "C:\\Users\\tomas\\source\\repos\\Club_Management\\Negocio\\Negocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Negocio\\Negocio.csproj",
+        "projectUniqueName": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Negocio\\Negocio.csproj",
         "projectName": "Negocio",
-        "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Negocio\\Negocio.csproj",
+        "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Negocio\\Negocio.csproj",
         "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Negocio\\obj\\",
+        "outputPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Negocio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -158,11 +158,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\Datos.csproj"
+              "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\Datos.csproj"
               },
-              "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj"
+              "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj"
               }
             }
           }
