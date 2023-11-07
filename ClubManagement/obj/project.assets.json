@@ -1144,11 +1144,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\ClubManagement\\ClubManagement.csproj",
+      "projectUniqueName": "C:\\Users\\tomas\\source\\repos\\Club_Management\\ClubManagement\\ClubManagement.csproj",
       "projectName": "ClubManagement",
-      "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\ClubManagement\\ClubManagement.csproj",
+      "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\ClubManagement\\ClubManagement.csproj",
       "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\ClubManagement\\obj\\",
+      "outputPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\ClubManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1165,14 +1165,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Datos\\Datos.csproj"
+            "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\Datos.csproj": {
+              "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Datos\\Datos.csproj"
             },
-            "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Entidades\\Entidades.csproj"
+            "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Entidades\\Entidades.csproj"
             },
-            "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\Users\\tomas\\Source\\Repos\\Club_Management\\Negocio\\Negocio.csproj"
+            "C:\\Users\\tomas\\source\\repos\\Club_Management\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\Users\\tomas\\source\\repos\\Club_Management\\Negocio\\Negocio.csproj"
             }
           }
         }

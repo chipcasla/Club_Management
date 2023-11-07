@@ -31,7 +31,7 @@ namespace ClubManagement
                 if(p != null)
                 {
                     this.Hide();
-                    formMenu formMenup = new formMenu();
+                    formMenu formMenup = new formMenu(p);
                     formMenup.ShowDialog();
                 }
                 else

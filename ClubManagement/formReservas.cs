@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,34 +15,48 @@ namespace ClubManagement
 {
     public partial class FormReservas : Form
     {
-        public FormReservas()
+        private Persona persona;
+        public FormReservas(Persona p)
         {
             InitializeComponent();
+            this.persona = p;
 
             ABMreservas aBMreservas = new ABMreservas();
 
-            List<Reserva> reservasList = aBMreservas.consultarReservas();
+            List<Reserva> reservasList = aBMreservas.consultarReservaCliente(p);
 
             // dataGridView1.DataSource = reservasList;
 
 
-            // Recorre la lista de reservas y agrega cada reserva al DataGridView
             foreach (Reserva reserva in reservasList)
             {
                 // Crea una nueva fila para el DataGridView
                 int rowIndex = dataGridView1.Rows.Add();
 
-                // Asigna manualmente los valores de cada columna
                 dataGridView1.Rows[rowIndex].Cells["Id"].Value = reserva.Id;
-                //dataGridView1.Rows[rowIndex].Cells["Persona"].Value = reserva.Persona.getDni().ToString();
-                //dataGridView1.Rows[rowIndex].Cells["Turno"].Value = reserva.Turno;
                 dataGridView1.Rows[rowIndex].Cells["estado"].Value = reserva.Estado;
+                dataGridView1.Rows[rowIndex].Cells["fecha"].Value = reserva.Turno.ToString("dd/MM/yyyy HH:mm");
+                dataGridView1.Rows[rowIndex].Cells["instalacion"].Value = reserva.Instalacion.getDescripcion();
+                dataGridView1.Rows[rowIndex].Cells["actividad"].Value = reserva.Instalacion.Actividad.getDescripcion();
                 //dataGridView1.Rows[rowIndex].Cells["DescripcionInstalacion"].Value = reserva.Instalacion.getDescripcion();
                 // Agrega más columnas según sea necesario
 
-                // Puedes repetir estos pasos para cada reserva en la lista
+            }
+            foreach (DataGridViewColumn column in dataGridView1.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                // O puedes utilizar otro modo, como DisplayedCells, DisplayedCellsExceptHeader o Fill
             }
 
+            this.persona = persona;
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formMenu formMenup = Application.OpenForms["formMenu"] as formMenu;
+            formMenup.Show();
+            this.Close();
         }
     }
 }
