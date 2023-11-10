@@ -13,6 +13,7 @@ namespace Entidades
         String apellido;
         String mail;
         String password;
+        String rol;
 
         public Persona()
         {
@@ -21,17 +22,22 @@ namespace Entidades
             this.apellido = "";
             this.mail = "";
             this.password = "";
+            this.rol = "";
         }
 
-        public Persona(int dni, string nombre, string apellido, string mail, string password)
+        public Persona(int dni, string nombre, string apellido, string mail, string password, string rol)
         {
             this.dni = dni;
             this.nombre = nombre;
             this.apellido = apellido;
             this.mail = mail;
             this.password = password;
+            this.rol = rol;
         }
-
+        public string getRol()
+        {
+            return this.rol;
+        }
         public int getDni()
         {
             return this.dni;

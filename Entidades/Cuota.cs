@@ -7,7 +7,7 @@ namespace Entidades
 {
     public class Cuota
     {
-        public Cuota(int idsocio, int mes, int anio, int pagado, double monto) 
+        public Cuota(int idsocio, int mes, int anio, bool pagado, decimal monto) 
         {
             idSocio = idsocio;
             Mes = mes;
@@ -18,8 +18,8 @@ namespace Entidades
         public int idSocio { get; set; }
         public int Mes {get; set; }    
         public int Anio { get; set; }  
-        public int Pagado { get; set; }
-        public double Monto { get; set; }
+        public bool Pagado { get; set; }
+        public decimal Monto { get; set; }
 
     }
 }

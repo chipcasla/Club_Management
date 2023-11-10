@@ -21,5 +21,10 @@ namespace Negocio
         {
             return dr.ObtenerReservaCliente(p.getDni()) ;
         }
+        public List<Reserva> consultarReservasDisponibles(string descInst, DateTime fecha)
+        {
+            return dr.ObtenerReservasDisponibles(descInst,fecha);
+        }
+
     }
 }

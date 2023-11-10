@@ -27,8 +27,8 @@ namespace Datos
                             idsocio: reader.GetInt32(0),
                             anio: reader.GetInt32(1),
                             mes: reader.GetInt32(2),
-                            pagado: reader.GetInt32(3),
-                            monto: reader.GetDouble(4)
+                            pagado: reader.GetBoolean(3),
+                            monto: reader.GetDecimal(4)
                         );
                         cuotas.Add(cuota);
                     }

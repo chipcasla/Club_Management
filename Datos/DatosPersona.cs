@@ -33,7 +33,8 @@ namespace Datos
                             reader["nombre"].ToString(),
                             reader["apellido"].ToString(),
                             reader["email"].ToString(),
-                            ""
+                            "",
+                            reader["rol"].ToString()
                         );
                         personas.Add(persona);
                     }
@@ -71,8 +72,9 @@ namespace Datos
                             int numDoc = int.Parse(reader["dni"].ToString());
                             string pass = reader["password"].ToString();
                             string mail = reader["email"].ToString();
+                            string rol = reader["rol"].ToString();    
 
-                            personaEncontrada = new Persona(numDoc, nombre, apellido, mail, pass);
+                            personaEncontrada = new Persona(numDoc, nombre, apellido, mail, pass,rol);
                             System.Diagnostics.Debug.WriteLine("BIEN");
                         }
                     }
@@ -114,8 +116,9 @@ namespace Datos
                             int numDoc = int.Parse(reader["dni"].ToString());
                             string pass = reader["password"].ToString();
                             string mail = reader["email"].ToString();
+                            string rol = reader["rol"].ToString();
 
-                            personaEncontrada = new Persona(numDoc, nombre, apellido, mail, "");
+                            personaEncontrada = new Persona(numDoc, nombre, apellido, mail, "", rol);
                             System.Diagnostics.Debug.WriteLine("BIEN");
                         }
                     }
