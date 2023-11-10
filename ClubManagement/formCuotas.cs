@@ -29,17 +29,20 @@ namespace ClubManagement
             this.persona = p;
             ABMcuotas instanciaABM = new ABMcuotas();
             List<Cuota> cuotasDePersona = instanciaABM.consultarCuotas(p);
-            double contador = 0;
+            decimal contador = 0;
             string pagado = "";
             foreach (Cuota cuota in cuotasDePersona)
             {
                 int rowIndex = dataGridViewCuotas.Rows.Add();
-                if (cuota.Pagado != 1)
+                if (cuota.Pagado)
+                {
+                    pagado = "Pago";
+                }
+                else
                 {
                     contador += cuota.Monto;
                     pagado = "Sin pagar";
                 }
-                else pagado = "Pago";
                 lblMontoDeuda.Visible = true;
                 lblMontoDeuda.Text = "$" + contador.ToString();
 

@@ -58,5 +58,12 @@ namespace ClubManagement
             formMenup.Show();
             this.Close();
         }
+
+        private void btnReservar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formReservar formReser = new formReservar();
+            formReser.ShowDialog();
+        }
     }
 }

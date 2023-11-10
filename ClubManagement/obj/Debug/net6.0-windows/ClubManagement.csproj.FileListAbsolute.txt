@@ -100,3 +100,6 @@ C:\Users\tomas\Source\Repos\Club_Management\ClubManagement\obj\Debug\net6.0-wind
 C:\Users\tomas\Source\Repos\Club_Management\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.genruntimeconfig.cache
 C:\Users\tomas\Source\Repos\Club_Management\ClubManagement\obj\Debug\net6.0-windows\ref\ClubManagement.dll
 C:\Users\tomas\source\repos\Club_Management\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.formCuotas.resources
+C:\Users\tomas\source\repos\Club_Management\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.formMenuAdmin.resources
+C:\Users\tomas\source\repos\Club_Management\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.formMenuProfe.resources
+C:\Users\tomas\source\repos\Club_Management\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.formReservar.resources

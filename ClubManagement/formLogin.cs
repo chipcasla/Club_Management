@@ -30,9 +30,27 @@ namespace ClubManagement
                 Persona p = pers.validarInicio(this.txtDNI.Text, this.txtPass.Text);
                 if (p != null)
                 {
-                    this.Hide();
-                    formMenu formMenup = new formMenu(p);
-                    formMenup.ShowDialog();
+                    if(p.getRol() == "admin")
+                    {
+                        this.Hide();
+                        formMenuAdmin formMenuAdm= new formMenuAdmin();
+                        formMenuAdm.ShowDialog();
+                    }
+                    else
+                    {
+                        if(p.getRol() == "user")
+                        {
+                            this.Hide();
+                            formMenu formMenup = new formMenu(p);
+                            formMenup.ShowDialog();
+                        }
+                        else
+                        {
+                            this.Hide();
+                            formMenuProfe formMenuProf = new formMenuProfe();
+                            formMenuProf.ShowDialog();
+                        }
+                    }
                 }
                 else
                 {

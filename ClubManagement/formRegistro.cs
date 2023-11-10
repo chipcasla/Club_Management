@@ -177,7 +177,7 @@ namespace ClubManagement
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             ABMpersonas pers = new ABMpersonas();
-            Persona p = new Persona(int.Parse(txtDNI.Text), txtNombre.Text, txtApellido.Text, txtMail.Text, txtPass.Text);
+            Persona p = new Persona(int.Parse(txtDNI.Text), txtNombre.Text, txtApellido.Text, txtMail.Text, txtPass.Text, "user");
             int v = pers.add(p);
             if (v == 1)
             {

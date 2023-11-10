@@ -4,6 +4,15 @@
     <Compile Update="formCuotas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="formMenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formMenuProfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formReservar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="formReservas.cs">
       <SubType>Form</SubType>
     </Compile>
