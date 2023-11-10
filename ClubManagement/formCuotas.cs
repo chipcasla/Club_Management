@@ -24,7 +24,7 @@ namespace ClubManagement
             CargarCuotas(p);
 
         }
-        public void CargarCuotas(Persona p)
+        public List<Cuota> CargarCuotas(Persona p)
         {
             this.persona = p;
             ABMcuotas instanciaABM = new ABMcuotas();
@@ -57,7 +57,7 @@ namespace ClubManagement
 
             }
 
-
+            return cuotasDePersona;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -81,6 +81,39 @@ namespace ClubManagement
             formMenu formMenup = Application.OpenForms["formMenu"] as formMenu;
             formMenup.Show();
             this.Close();
+        }
+        
+        
+        public void FiltrarCuotasPorAño(int añoSeleccionado, Persona p)
+        {
+            ABMcuotas abmc = new ABMcuotas();
+            List<Cuota> cuotasDePersona = abmc.consultarCuotas(p);
+            // Filtrar las cuotas por el año seleccionado
+            var cuotasFiltradas = cuotasDePersona.Where(cuota => cuota.Anio == añoSeleccionado).ToList();
+
+
+            dataGridViewCuotas.Rows.Clear();
+            foreach (var cuota in cuotasFiltradas)
+            {
+                int rowIndex = dataGridViewCuotas.Rows.Add();
+                dataGridViewCuotas.Rows[rowIndex].Cells["anio"].Value = cuota.Anio;
+                dataGridViewCuotas.Rows[rowIndex].Cells["mes"].Value = cuota.Mes;
+                dataGridViewCuotas.Rows[rowIndex].Cells["monto"].Value = cuota.Monto;
+                dataGridViewCuotas.Rows[rowIndex].Cells["pago"].Value = cuota.Pagado ? "Pago" : "Sin pagar";
+            }
+            dataGridViewCuotas.AutoResizeColumns();
+        }
+        public void cbAnio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbAnio.SelectedIndex != null) { 
+        
+                FiltrarCuotasPorAño(int.Parse(cbAnio.SelectedItem.ToString()), persona);
+            }
+            else
+            {
+                
+                MessageBox.Show("El año seleccionado no es válido.");
+            }
         }
     }
 }

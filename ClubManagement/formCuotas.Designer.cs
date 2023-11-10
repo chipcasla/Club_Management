@@ -162,6 +162,7 @@
             cbAnio.Name = "cbAnio";
             cbAnio.Size = new Size(151, 28);
             cbAnio.TabIndex = 5;
+            cbAnio.SelectedIndexChanged += cbAnio_SelectedIndexChanged;
             cbAnio.Click += cbAnio_Click;
             // 
             // lblFiltro
