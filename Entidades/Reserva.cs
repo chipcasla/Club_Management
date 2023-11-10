@@ -16,6 +16,7 @@ namespace Entidades
             Instalacion = instalacion;
             Hora = hora;
         }
+        public Reserva() { }
         public int Id { get; set; }
         public string Estado { get; set; }
 

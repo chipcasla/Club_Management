@@ -62,8 +62,13 @@ namespace ClubManagement
         private void btnReservar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            formReservar formReser = new formReservar();
+            formReservar formReser = new formReservar(persona);
             formReser.ShowDialog();
+        }
+
+        private void FormReservas_Load(object sender, EventArgs e)
+        {
+            dataGridView1.Refresh();
         }
     }
 }

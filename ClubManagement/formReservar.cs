@@ -14,8 +14,10 @@ namespace ClubManagement
 {
     public partial class formReservar : Form
     {
-        public formReservar()
+        Persona persona;
+        public formReservar(Persona pers)
         {
+            this.persona = pers;
             InitializeComponent();
         }
 
@@ -72,7 +74,30 @@ namespace ClubManagement
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
+             Reserva reserva = new Reserva();
+            reserva.Estado = "Pendiente";
+            reserva.Hora = TimeOnly.Parse(cbHorario.SelectedItem.ToString());
+            reserva.Turno = new DateTime(
+                calendar.SelectionRange.Start.Year, 
+                calendar.SelectionRange.Start.Month, 
+                calendar.SelectionRange.Start.Day, 
+                reserva.Hora.Hour,
+                0,
+                0
+                );
+            reserva.Persona = persona;
+            ABMInstalaciones abmi= new ABMInstalaciones();
+            reserva.Instalacion = abmi.obtenerXDescripcion(cbIntalacion.SelectedItem.ToString());
+            ABMreservas ambr = new ABMreservas();
+            if(ambr.agregarReserva(reserva) == 1)
+            {
+                MessageBox.Show("Reserva creada con exito!");
+                this.Hide();
+                FormReservas formReservas = new FormReservas(persona);
+                formReservas.Show();
+                this.Close();
+            }
+            else MessageBox.Show("Ocurrio un problema, intente nuevamente");
         }
     }
 }

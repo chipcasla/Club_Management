@@ -46,5 +46,39 @@ namespace Datos
 
             return instalaciones;
         }
+        public Instalacion obtenerInstalacionesXDescripcion(string descIns)
+        {
+            
+            SqlConnection connection = Conexion.openConection();
+            string query = "select ins.idInstalacion, ins.idActividad, act.descripcion from instalaciones ins left join actividades act on ins.idActividad = act.idActividad where ins.descripcion = @descIns;";
+
+            Instalacion ins = null;
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@descIns", descIns);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if(reader.Read())
+                    {
+                        ins = new Instalacion(
+                            
+                            int.Parse(reader["idInstalacion"].ToString()),
+                            descIns,
+                            new Actividad
+                            (
+                                int.Parse(reader["idActividad"].ToString()),
+                                reader["descripcion"].ToString(),
+                                0
+                            )
+                        );
+                        
+                    }
+                }
+            }
+
+            Conexion.closeConnection(connection);
+
+            return ins;
+        }
     }
 }

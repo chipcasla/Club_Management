@@ -25,6 +25,9 @@ namespace Negocio
         {
             return dr.ObtenerReservasDisponibles(descInst,fecha);
         }
-
+        public int  agregarReserva(Reserva reserva)
+        {
+            return dr.addReserva(reserva);
+        }
     }
 }

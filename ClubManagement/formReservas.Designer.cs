@@ -186,6 +186,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormReservas";
             Text = "Reservas";
+            Load += FormReservas_Load;
             ((System.ComponentModel.ISupportInitialize)reservaBindingSource).EndInit();
             ((System.ComponentModel.ISupportInitialize)reservaBindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

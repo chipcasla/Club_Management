@@ -200,7 +200,6 @@ namespace Datos
               
                 connection = Conexion.openConection();
 
-                // Consulta SQL para buscar la persona por DNI y contraseña
                 string query = "DECLARE @nuevoIdReservas INT SELECT @nuevoIdReservas = ISNULL(MAX(idReservas), 0) + 1 FROM reservas INSERT INTO reservas (idReservas, estado, idInstalacion, dni, fecha, hora) VALUES (@nuevoIdReservas, 'Pendiente', @idInstalacion, @dni, @fecha, @hora);";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -208,7 +207,7 @@ namespace Datos
                     command.Parameters.AddWithValue("@idInstalacion", reserva.Instalacion.getId());
                     command.Parameters.AddWithValue("@dni", reserva.Persona.getDni());
                     command.Parameters.AddWithValue("@fecha", reserva.Turno);
-                    command.Parameters.AddWithValue("@hora", reserva.Hora);
+                    command.Parameters.AddWithValue("@hora", reserva.Hora.ToTimeSpan());
                     
 
                     int rowsAffected = command.ExecuteNonQuery();
@@ -218,6 +217,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Excepción ArgumentException: {ex.Message}");
                 return 0;
             }
             finally

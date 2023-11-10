@@ -15,5 +15,9 @@ namespace Negocio
         {
             return di.obtenerInstalaciones(act);
         }
+        public Instalacion obtenerXDescripcion(string desc)
+        {
+            return di.obtenerInstalacionesXDescripcion(desc);
+        }
     }
 }
