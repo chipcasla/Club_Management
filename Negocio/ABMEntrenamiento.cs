@@ -8,5 +8,7 @@ namespace Negocio
 {
     public class ABMEntrenamiento
     {
+        DatosEntrenamiento de = new DatosEntrenamiento();
+
     }
 }

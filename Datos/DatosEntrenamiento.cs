@@ -118,7 +118,7 @@ namespace Datos
                         {
                             Entrenamiento entrenamiento = new Entrenamiento
                             (
-                                (int)reader["IdEntrenamiento"],
+                                (int)reader["idEntrenamiento"],
                                 (TimeOnly)reader["horaDesde"],
                                 (TimeOnly)reader["horaHasta"],
                                 (int)reader["dia"],
