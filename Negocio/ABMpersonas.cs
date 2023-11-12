@@ -20,5 +20,15 @@ namespace Negocio
         {
             return dp.addPersona(persona);
         }
+
+        public void update(Persona p)
+        {
+            dp.updatePersona(p);
+        }
+
+        public void delete(string dni)
+        {
+            dp.deletePersona(dni);
+        }
     }
 }

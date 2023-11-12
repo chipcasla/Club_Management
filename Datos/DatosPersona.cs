@@ -14,12 +14,12 @@ namespace Datos
 
         }
 
-        public List<Persona> ObtenerPersonas()
+        public List<Persona> ObtenerSocios()
         {
             List<Persona> personas = new List<Persona>();
 
             SqlConnection connection = Conexion.openConection();
-            string query = "SELECT dni, nombre, apellido, email FROM personas;";
+            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol=socio;";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -44,6 +44,38 @@ namespace Datos
             Conexion.closeConnection(connection);
 
             return personas;
+        }
+
+        public List<Profesor> ObtenerEntrenadores()
+        {
+            List<Profesor> entrenadores = new List<Profesor>();
+
+            SqlConnection connection = Conexion.openConection();
+            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol=entrenador;";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Profesor profesor = new Profesor
+                        (
+                            int.Parse(reader["dni"].ToString()),
+                            reader["nombre"].ToString(),
+                            reader["apellido"].ToString(),
+                            reader["email"].ToString(),
+                            "",
+                            reader["rol"].ToString()
+                        );
+                        entrenadores.Add(profesor);
+                    }
+                }
+            }
+
+            Conexion.closeConnection(connection);
+
+            return entrenadores;
         }
 
         public Persona getPersona(string dni, string password)
@@ -72,9 +104,15 @@ namespace Datos
                             int numDoc = int.Parse(reader["dni"].ToString());
                             string pass = reader["password"].ToString();
                             string mail = reader["email"].ToString();
-                            string rol = reader["rol"].ToString();    
+                            string rol = reader["rol"].ToString();
 
-                            personaEncontrada = new Persona(numDoc, nombre, apellido, mail, pass,rol);
+                            if(rol== "entrenador")
+                            {
+                                personaEncontrada = new Profesor(numDoc, nombre, apellido, mail, pass, rol);
+                            } else
+                            {
+                                personaEncontrada = new Persona(numDoc, nombre, apellido, mail, pass,rol);
+                            }
                             System.Diagnostics.Debug.WriteLine("BIEN");
                         }
                     }
@@ -137,7 +175,7 @@ namespace Datos
 
         public int validarDuplicado(int dni)
         {
-            List<Persona> personas = ObtenerPersonas();
+            List<Persona> personas = ObtenerSocios();
             foreach (Persona p in personas) 
             {
                 if(p.getDni() == dni)
@@ -162,7 +200,7 @@ namespace Datos
                     connection = Conexion.openConection();
 
                     // Consulta SQL para buscar la persona por DNI y contraseña
-                    string query = "INSERT INTO personas VALUES (@dni, @nombre, @apellido, @mail, @password)";
+                    string query = "INSERT INTO personas VALUES (@dni, @nombre, @apellido, @mail, @password, @rol)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -171,6 +209,7 @@ namespace Datos
                         command.Parameters.AddWithValue("@apellido", persona.getApellido());
                         command.Parameters.AddWithValue("@mail", persona.getMail());
                         command.Parameters.AddWithValue("@password", persona.getPassword());
+                        command.Parameters.AddWithValue("@rol", persona.getRol());
 
                         int rowsAffected = command.ExecuteNonQuery();
                         return rowsAffected;
@@ -186,6 +225,56 @@ namespace Datos
                 if (connection != null) 
                 {
                     Conexion.closeConnection(connection);                    
+                }
+            }
+        }
+
+        public void updatePersona(Persona persona)
+        {
+            SqlConnection connection = null;
+            try
+            {
+             
+                    connection = Conexion.openConection();
+
+                    // Consulta SQL para buscar la persona por DNI y contraseña
+                    string query = "UPDATE personas SET nombre = @nombre, apellido = @apellido, mail = @mail, password = @password WHERE dni = @dni";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@dni", persona.getDni());
+                        command.Parameters.AddWithValue("@nombre", persona.getNombre());
+                        command.Parameters.AddWithValue("@apellido", persona.getApellido());
+                        command.Parameters.AddWithValue("@mail", persona.getMail());
+                        command.Parameters.AddWithValue("@password", persona.getPassword());
+
+                        command.ExecuteNonQuery();
+                    }
+             
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    Conexion.closeConnection(connection);
+                }
+            }
+        }
+
+        public void deletePersona(string dni)
+        {
+            using (SqlConnection connection = Conexion.openConection())
+            {
+                string query = "DELETE FROM personas WHERE dni = @Dni";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Dni", dni);
+
+                    command.ExecuteNonQuery();
                 }
             }
         }

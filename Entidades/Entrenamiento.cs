@@ -7,16 +7,22 @@ namespace Entidades
 {
     public class Entrenamiento
     {
-        private int idEntrenamiento;
-        private int horaDesde;
+        public int IdEntrenamiento { get; set; }
+        public TimeOnly HoraDesde { get; set; }
+        public TimeOnly HoraHasta { get; set; }
+        public int Dia { get; set; }
 
-        private int horaHasta;
-        private int dia;
+        public Instalacion Instalacion { get; set; }
+        public Profesor Profesor { get; set; }
 
-        public Profesor Profesor {
-            get => default;
-            set {
-            }
+        public Entrenamiento(int idEntrenamiento, TimeOnly horaDesde, TimeOnly horaHasta, int dia,Instalacion instalacion, Profesor profesor)
+        {
+            IdEntrenamiento = idEntrenamiento;
+            HoraDesde = horaDesde;
+            HoraHasta = horaHasta;
+            Dia = dia;
+            Instalacion = instalacion;
+            Profesor = profesor;
         }
     }
 }

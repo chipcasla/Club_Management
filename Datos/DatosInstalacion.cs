@@ -80,5 +80,40 @@ namespace Datos
 
             return ins;
         }
+
+        public Instalacion obtenerInstalacionXId(int id)
+        {
+
+            SqlConnection connection = Conexion.openConection();
+            string query = "select ins.descripcion as 'descIns', ins.idActividad, act.descripcion from instalaciones ins left join actividades act on ins.idActividad = act.idActividad where ins.idInstalacion = @idIns;";
+
+            Instalacion ins = null;
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@idIns", id);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        ins = new Instalacion(
+
+                            id,
+                            reader["descIns"].ToString(),
+                            new Actividad
+                            (
+                                int.Parse(reader["idActividad"].ToString()),
+                                reader["descripcion"].ToString(),
+                                0
+                            )
+                        );
+
+                    }
+                }
+            }
+
+            Conexion.closeConnection(connection);
+
+            return ins;
+        }
     }
 }
