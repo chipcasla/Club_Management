@@ -45,10 +45,13 @@ namespace Negocio
         {
             dp.deletePersona(dni);
         }
-
-        public List<Persona> obtenerSocios()
+        public List<PersonaCuota> obtenerSociosCuotas()
         {
-            return dp.ObtenerSocios();
+            return dp.ObtenerSociosCuotas();
+        }
+        public int buscaPersona(int dni)
+        {
+            return dp.validarDuplicado(dni);
         }
     }
 }

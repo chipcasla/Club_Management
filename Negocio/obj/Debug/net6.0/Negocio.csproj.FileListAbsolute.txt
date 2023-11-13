@@ -91,3 +91,22 @@ C:\Users\julib\OneDrive\Escritorio\TP-NET\Club_Management\Negocio\bin\Debug\net6
 C:\Users\julib\OneDrive\Escritorio\TP-NET\Club_Management\Negocio\obj\Debug\net6.0\Negocio.csproj.CopyComplete
 C:\Users\julib\OneDrive\Escritorio\TP-NET\Club_Management\Negocio\obj\Debug\net6.0\Negocio.genruntimeconfig.cache
 C:\Users\julib\OneDrive\Escritorio\TP-NET\Club_Management\Negocio\obj\Debug\net6.0\ref\Negocio.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.csproj.AssemblyReference.cache
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.AssemblyInfoInputs.cache
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.AssemblyInfo.cs
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\refint\Negocio.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.pdb
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\bin\Debug\net6.0\Negocio.deps.json
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\bin\Debug\net6.0\Negocio.runtimeconfig.json
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\bin\Debug\net6.0\Negocio.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\bin\Debug\net6.0\Negocio.pdb
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\bin\Debug\net6.0\Datos.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\bin\Debug\net6.0\Entidades.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\bin\Debug\net6.0\Datos.pdb
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\bin\Debug\net6.0\Entidades.pdb
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.csproj.CopyComplete
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\Negocio.genruntimeconfig.cache
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Negocio\obj\Debug\net6.0\ref\Negocio.dll

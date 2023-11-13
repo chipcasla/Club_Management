@@ -18,7 +18,7 @@ namespace Negocio
             return da.obtenerActividades();
         }
 
-        public Instalacion obtenerActividadPorId(int id)
+        public Actividad obtenerActividadPorId(int id)
         {
             return da.obtenerActividadXId(id);
         }
