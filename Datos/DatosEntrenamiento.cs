@@ -18,7 +18,7 @@ namespace Datos
             {
                 string query = "SELECT COUNT(*) FROM entrenamientos " +
                                "WHERE dia = @Dia AND horaDesde <= @Hora AND horaHasta > @Hora " +
-                               "AND instalacionId = @InstalacionId";
+                               "AND idInstalacion = @InstalacionId";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -67,7 +67,7 @@ namespace Datos
             {
 
                 string query = "SELECT * FROM entrenamientos " +
-                               "WHERE dia = @Dia AND horaDesde <= @Hora AND horaHasta > @Hora AND instalacionId = @InstalacionId";
+                               "WHERE dia = @Dia AND horaDesde <= @Hora AND horaHasta > @Hora AND idInstalacion = @InstalacionId";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -81,12 +81,12 @@ namespace Datos
                         {
                             Entrenamiento entrenamiento = new Entrenamiento
                             (
-                                (int)reader["IdEntrenamiento"],
+                                (int)reader["idEntrenamiento"],
                                 (TimeOnly)reader["horaDesde"],
                                 (TimeOnly)reader["horaHasta"],
                                 (int)reader["dia"],
-                                new DatosInstalacion().obtenerInstalacionXId((int)reader["instalacionId"]),                              
-                                (Profesor)new DatosPersona().getPersonaByDNI(reader["profesorId"].ToString())
+                                new DatosInstalacion().obtenerInstalacionXId((int)reader["idInstalacion"]),                              
+                                (Profesor)new DatosPersona().getPersonaByDNI(reader["idProfesor"].ToString())
                             );
 
                             entrenamientos.Add(entrenamiento);
@@ -106,7 +106,7 @@ namespace Datos
             {
 
                 string query = "SELECT * FROM entrenamientos " +
-                               "WHERE profesorId = @ProfesorId";
+                               "WHERE idProfesor = @ProfesorId";
 
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -122,8 +122,8 @@ namespace Datos
                                 (TimeOnly)reader["horaDesde"],
                                 (TimeOnly)reader["horaHasta"],
                                 (int)reader["dia"],
-                                new DatosInstalacion().obtenerInstalacionXId((int)reader["instalacionId"]),
-                                (Profesor)new DatosPersona().getPersonaByDNI(reader["profesorId"].ToString())
+                                new DatosInstalacion().obtenerInstalacionXId((int)reader["idInstalacion"]),
+                                (Profesor)new DatosPersona().getPersonaByDNI(reader["idProfesor"].ToString())
                             );
 
                             entrenamientos.Add(entrenamiento);
@@ -133,6 +133,55 @@ namespace Datos
             }
 
             return entrenamientos;
+        }
+
+        public void updateEntrenamiento(Entrenamiento entrenamiento)
+        {
+            SqlConnection connection = null;
+            try
+            {
+
+                connection = Conexion.openConection();
+
+                string query = "UPDATE entrenamientos SET horaDesde = @HoraDesde, horaHasta = @HoraHasta, dia = @Dia, idInstalacion = @IdInstalacion WHERE idEntrenamiento = @Id";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@HoraDesde", entrenamiento.HoraDesde);
+                    command.Parameters.AddWithValue("@HoraHasta", entrenamiento.HoraHasta);
+                    command.Parameters.AddWithValue("@Dia", entrenamiento.Dia);
+                    command.Parameters.AddWithValue("@IdInstalacion", entrenamiento.Instalacion.getId());
+                    command.Parameters.AddWithValue("@Id", entrenamiento.IdEntrenamiento);
+
+                    command.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    Conexion.closeConnection(connection);
+                }
+            }
+        }
+
+        public void deleteEntrenamiento(int id)
+        {
+            using (SqlConnection connection = Conexion.openConection())
+            {
+                string query = "DELETE FROM entrenamientos WHERE idEntrenamiento = @Id";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", id);
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

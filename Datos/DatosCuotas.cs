@@ -15,7 +15,7 @@ namespace Datos
         {
             List<Cuota> cuotas = new List<Cuota>();
             SqlConnection connection = Conexion.openConection();
-            using (SqlCommand command = new SqlCommand("SELECT idSocio,anio, mes, pagado, monto FROM Cuotas WHERE idSocio = @dni", connection))
+            using (SqlCommand command = new SqlCommand("SELECT idSocio,anio, mes, pagado, monto FROM Cuotas WHERE idSocio = @dni ORDER BY anio DESC, mes DESC", connection))
             {
                 command.Parameters.AddWithValue("@dni", dni);
                 using (SqlDataReader reader = command.ExecuteReader())

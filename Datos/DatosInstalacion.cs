@@ -12,6 +12,39 @@ namespace Datos
     public class DatosInstalacion
     {
         public DatosInstalacion() { }
+
+        public List<Instalacion> obtenerTodasInstalaciones()
+        {
+            List<Instalacion> instalaciones = new List<Instalacion>();
+
+            SqlConnection connection = Conexion.openConection();
+            string query = "SELECT idInstalacion, ins.descripcion as 'descIns', ins.idActividad, act.descripcion as 'descAct' FROM instalaciones ins inner join actividades act on ins.idActividad = act.idActividad;";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Instalacion instalacion = new Instalacion
+                        (
+                            int.Parse(reader["idInstalacion"].ToString()),
+                            reader["descIns"].ToString(),
+                            new Actividad(
+                                int.Parse(reader["idActividad"].ToString()),
+                                reader["descAct"].ToString(),
+                                0
+                            )
+                        );
+                        instalaciones.Add(instalacion);
+                    }
+                }
+            }
+
+            Conexion.closeConnection(connection);
+
+            return instalaciones;
+        }
         public List<Instalacion> obtenerInstalaciones(string act)
         {
             List<Instalacion> instalaciones = new List<Instalacion>();
@@ -114,6 +147,86 @@ namespace Datos
             Conexion.closeConnection(connection);
 
             return ins;
+        }
+
+        public int addInstalacion(Instalacion instalacion)
+        {
+            SqlConnection connection = null;
+            try
+            {
+                connection = Conexion.openConection();
+
+                // Consulta SQL para buscar la persona por DNI y contraseña
+                string query = "INSERT INTO instalaciones VALUES (@Descripcion, @IdActividad)";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Descripcion", instalacion.getDescripcion());
+                    command.Parameters.AddWithValue("@IdActividad", instalacion.Actividad.getId());                    
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected;
+                }                
+            }
+            catch (Exception ex)
+            {
+                return 0;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    Conexion.closeConnection(connection);
+                }
+            }
+        }
+
+        public void updateInstalacion(Instalacion instalacion)
+        {
+            SqlConnection connection = null;
+            try
+            {
+
+                connection = Conexion.openConection();
+
+                // Consulta SQL para buscar la persona por DNI y contraseña
+                string query = "UPDATE instalaciones SET descripcion = @Descripcion, idActividad = @IdActividad WHERE idInstalacion = @IdIns";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Descripcion", instalacion.getDescripcion());
+                    command.Parameters.AddWithValue("@IdActividad", instalacion.Actividad.getId());
+                    command.Parameters.AddWithValue("@IdIns", instalacion.getId());
+
+                    command.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    Conexion.closeConnection(connection);
+                }
+            }
+        }
+
+        public void deleteInstalacion(int id)
+        {
+            using (SqlConnection connection = Conexion.openConection())
+            {
+                string query = "DELETE FROM instalaciones WHERE idInstalacion = @Id";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", id);
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

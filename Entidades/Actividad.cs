@@ -19,9 +19,19 @@ namespace Entidades
         }
 
         public Entrenamiento Entrenamiento {get; set; }
+
+        public int getId()
+        {
+            return this.idActividad;
+        }
         public string getDescripcion()
         {
             return this.descripcion;
+        }
+
+        public float getCosto()
+        {
+            return this.costo;
         }
     }
 }

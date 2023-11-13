@@ -25,9 +25,19 @@ namespace Negocio
         {
             return dr.ObtenerReservasDisponibles(descInst,fecha);
         }
+
+        public List<Reserva> reservasPorFecha(DateTime fecha)
+        {
+            return dr.obtenerReservasPorFecha(fecha);
+        }
         public int  agregarReserva(Reserva reserva)
         {
             return dr.addReserva(reserva);
+        }
+
+        public void cancelarReserva(Reserva reserva)
+        {
+            dr.cancelarReserva(reserva);
         }
     }
 }
