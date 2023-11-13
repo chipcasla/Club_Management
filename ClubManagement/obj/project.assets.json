@@ -1139,19 +1139,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\julib\\.nuget\\packages\\": {}
+    "C:\\Users\\tomas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\ClubManagement\\ClubManagement.csproj",
+      "projectUniqueName": "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\ClubManagement\\ClubManagement.csproj",
       "projectName": "ClubManagement",
-      "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\ClubManagement\\ClubManagement.csproj",
-      "packagesPath": "C:\\Users\\julib\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\ClubManagement\\obj\\",
+      "projectPath": "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\ClubManagement\\ClubManagement.csproj",
+      "packagesPath": "C:\\Users\\tomas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\ClubManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\julib\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1165,14 +1165,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj"
+            "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\Datos\\Datos.csproj": {
+              "projectPath": "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\Datos\\Datos.csproj"
             },
-            "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj"
+            "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\Entidades\\Entidades.csproj"
             },
-            "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Negocio\\Negocio.csproj"
+            "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\Users\\tomas\\OneDrive\\Escritorio\\Club_Management-main (1)\\Club_Management-main\\Negocio\\Negocio.csproj"
             }
           }
         }
@@ -1211,7 +1211,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

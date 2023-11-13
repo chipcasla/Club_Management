@@ -15,7 +15,7 @@ namespace Datos
         public static SqlConnection connection = null;
         public static SqlConnection openConection()
         {
-            string connectionString = "Data Source=DESKTOP-JULIANB\\SQLSERVEREXPRESS;Initial Catalog=db_club;Integrated Security=True;";
+            string connectionString = "Data Source=NOTEBOOK-DE-TOM\\SQLEXPRESS;Initial Catalog=db_club;Integrated Security=True";
            
             try
             {

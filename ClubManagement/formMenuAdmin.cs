@@ -29,6 +29,7 @@ namespace ClubManagement
             this.Hide();
             formSocios formSocios = new formSocios();
             formSocios.ShowDialog();
+            this.Close();
         }
     }
 }

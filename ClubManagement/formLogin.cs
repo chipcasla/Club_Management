@@ -40,7 +40,7 @@ namespace ClubManagement
                     }
                     else
                     {
-                        if(p.getRol().Trim().ToLower() == "socio")
+                        if(p.getRol().Trim().ToLower() == "user")
                         {
                             this.Hide();
                             formMenu formMenup = new formMenu(p);

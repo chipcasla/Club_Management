@@ -22,9 +22,59 @@ namespace ClubManagement
         private void formSocios_Load(object sender, EventArgs e)
         {
             ABMpersonas abmPersonas = new ABMpersonas();
-            List<Persona> personasList = abmPersonas.obtenerSocios();
+            List<PersonaCuota> personasList = abmPersonas.obtenerSociosCuotas();
 
-            dataSocios.DataSource = personasList;
+            foreach (PersonaCuota persona in personasList)
+            {
+
+                int rowIndex = dataSocios.Rows.Add();
+
+                dataSocios.Rows[rowIndex].Cells["Dni"].Value = persona.getDni();
+                dataSocios.Rows[rowIndex].Cells["Nombre"].Value = persona.getNombre();
+                dataSocios.Rows[rowIndex].Cells["Apellido"].Value = persona.getApellido();
+                dataSocios.Rows[rowIndex].Cells["Email"].Value = persona.getMail();
+                dataSocios.Rows[rowIndex].Cells["CuotasAsignadas"].Value = persona.getCuotasAsignadas();
+                dataSocios.Rows[rowIndex].Cells["Debe"].Value = persona.getDebe();
+                dataSocios.Rows[rowIndex].Cells["Monto"].Value = persona.getMonto();
+
+
+            }
+            foreach (DataGridViewColumn column in dataSocios.Columns)
+            {
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            }
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formMenuAdmin formMenuAd = new formMenuAdmin();
+            formMenuAd.Show();
+            this.Close();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Quieres continuar?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                        
+                ABMpersonas abmPersonas = new ABMpersonas();
+                int personaExiste = abmPersonas.buscaPersona(int.Parse(txtDni.Text));
+                if (personaExiste == 2)
+                {
+                    abmPersonas.delete(txtDni.Text);
+                    MessageBox.Show("Usuario eliminado con exito!");
+                    this.Hide();
+                    formSocios formSoci= new formSocios();
+                    formSoci.Show();
+                    this.Close();
+                }
+                else MessageBox.Show("No existe el dni ingresado.");
+
+            }
+            
         }
     }
 }
