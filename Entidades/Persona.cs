@@ -22,7 +22,7 @@ namespace Entidades
             this.apellido = "";
             this.mail = "";
             this.password = "";
-            this.rol = "";
+            this.rol = "socio";
         }
 
         public Persona(int dni, string nombre, string apellido, string mail, string password, string rol)
@@ -32,7 +32,7 @@ namespace Entidades
             this.apellido = apellido;
             this.mail = mail;
             this.password = password;
-            this.rol = rol;
+            this.rol = "socio";
         }
         public string getRol()
         {

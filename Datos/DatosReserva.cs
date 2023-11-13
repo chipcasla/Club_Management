@@ -58,50 +58,6 @@ namespace Datos
             return reservas;
         }
 
-        public Persona getPersona(string dni, string password)
-        {
-            Persona personaEncontrada = null;
-            //Abrir conexion
-
-            SqlConnection connection = Conexion.openConection();
-
-            // Consulta SQL para buscar la persona por DNI y contraseña
-            string query = "SELECT * FROM personas p WHERE p.dni=@DNI and p.password=@password";
-
-            using (SqlCommand command = new SqlCommand(query, connection))
-            {
-                command.Parameters.AddWithValue("@DNI", dni);
-                command.Parameters.AddWithValue("@password", password);
-
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    try
-                    {
-                        if (reader.Read())
-                        {
-                            string nombre = reader["nombre"].ToString();
-                            string apellido = reader["apellido"].ToString();
-                            int numDoc = int.Parse(reader["dni"].ToString());
-                            string pass = reader["password"].ToString();
-                            string mail = reader["email"].ToString();
-                            string rol = reader["rol"].ToString();
-                            personaEncontrada = new Persona(numDoc, nombre, apellido, mail, pass,rol);
-                            System.Diagnostics.Debug.WriteLine("BIEN");
-                        }
-                    }
-                    catch
-                    {
-                        Conexion.closeConnection(connection);
-                        System.Diagnostics.Debug.WriteLine("MAL");
-                        return null;
-                    }
-                }
-            }
-            Conexion.closeConnection(connection);
-
-            return personaEncontrada;
-        }
-
         public List<Reserva> ObtenerReservaCliente(int dni)
         {
             List<Reserva> reservas = new List<Reserva>();
@@ -192,6 +148,42 @@ namespace Datos
 
             return reservas;
         }
+
+        public List<Reserva> obtenerReservasPorFecha(DateTime fecha)
+        {
+            List<Reserva> reservas = new List<Reserva>();
+
+            SqlConnection connection = Conexion.openConection();
+            string query = "select idReservas, res.estado,res.idInstalacion, ins.descripcion, res.dni, res.fecha, res.hora, idActividad from reservas res inner join instalaciones ins on res.idInstalacion = ins.idInstalacion where estado = 'PENDIENTE' and fecha = @fecha;";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@fecha", fecha.Date);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        DatosPersona datosPersona = new DatosPersona();
+                        Reserva reserva = new Reserva
+                        (
+                            int.Parse(reader["idReservas"].ToString()),
+                            reader["estado"].ToString(),
+                            (DateTime)reader["fecha"],
+                            TimeOnly.FromTimeSpan(reader.GetTimeSpan(reader.GetOrdinal("hora"))),
+                            //(TimeOnly)reader["hora"],
+                            datosPersona.getPersonaByDNI(reader["dni"].ToString()),
+                            new DatosInstalacion().obtenerInstalacionXId(int.Parse(reader["idInstalacion"].ToString()))
+                        );
+                        reservas.Add(reserva);
+                    }
+                }
+            }
+
+            Conexion.closeConnection(connection);
+
+            return reservas;
+        }
+
         public int addReserva(Reserva reserva)
         {
             SqlConnection connection = null;
@@ -219,6 +211,35 @@ namespace Datos
             {
                 Console.WriteLine($"Excepción ArgumentException: {ex.Message}");
                 return 0;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    Conexion.closeConnection(connection);
+                }
+            }
+        }
+
+        public void cancelarReserva(Reserva reserva)
+        {
+            SqlConnection connection = null;
+            try
+            {
+                connection = Conexion.openConection();
+                // Consulta SQL para cambiar el estado de reserva a cancelada
+                string query = "UPDATE reservas SET estado = 'Cancelada' WHERE idReservas = @IdReserva";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@IdReserva", reserva.Id);
+                    command.ExecuteNonQuery();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
             finally
             {

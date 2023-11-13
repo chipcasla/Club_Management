@@ -11,6 +11,16 @@ namespace Negocio
     public class ABMpersonas
     {
         DatosPersona dp = new DatosPersona();
+
+        public List<Persona> obtenerSocios()
+        {
+            return dp.ObtenerSocios();
+        }
+
+        public List<Profesor> obtenerProfesores()
+        {
+            return dp.ObtenerEntrenadores();
+        }
         public Persona validarInicio(string dni, string pass)
         {
             return dp.getPersona(dni, pass);
@@ -19,6 +29,11 @@ namespace Negocio
         public int add(Persona persona)
         {
             return dp.addPersona(persona);
+        }
+
+        public int addProfesor(Profesor profesor)
+        {
+            return dp.addPersona(profesor);
         }
 
         public void update(Persona p)

@@ -19,7 +19,7 @@ namespace Datos
             List<Persona> personas = new List<Persona>();
 
             SqlConnection connection = Conexion.openConection();
-            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol=socio;";
+            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol='socio';";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -51,7 +51,7 @@ namespace Datos
             List<Profesor> entrenadores = new List<Profesor>();
 
             SqlConnection connection = Conexion.openConection();
-            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol=entrenador;";
+            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol='entrenador';";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
