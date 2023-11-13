@@ -6,9 +6,5 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    public class ABMEntrenamiento
-    {
-        DatosEntrenamiento de = new DatosEntrenamiento();
-
-    }
+    
 }

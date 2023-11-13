@@ -30,7 +30,9 @@ namespace ClubManagement
                 Persona p = pers.validarInicio(this.txtDNI.Text, this.txtPass.Text);
                 if (p != null)
                 {
-                    if(p.getRol() == "admin")
+                    System.Diagnostics.Debug.WriteLine("ROL: "+ p.getRol().ToString() == "admin");
+                    System.Diagnostics.Debug.WriteLine("COMPARE TO: "+ p.getRol().CompareTo("admin"));
+                    if (p.getRol().Trim().ToLower() == "admin")
                     {
                         this.Hide();
                         formMenuAdmin formMenuAdm= new formMenuAdmin();
@@ -38,7 +40,7 @@ namespace ClubManagement
                     }
                     else
                     {
-                        if(p.getRol() == "socio")
+                        if(p.getRol().Trim().ToLower() == "socio")
                         {
                             this.Hide();
                             formMenu formMenup = new formMenu(p);

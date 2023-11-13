@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\ClubManagement\\ClubManagement.csproj": {}
+    "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\ClubManagement\\ClubManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\ClubManagement\\ClubManagement.csproj": {
+    "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\ClubManagement\\ClubManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\ClubManagement\\ClubManagement.csproj",
+        "projectUniqueName": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\ClubManagement\\ClubManagement.csproj",
         "projectName": "ClubManagement",
-        "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\ClubManagement\\ClubManagement.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\ClubManagement\\obj\\",
+        "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\ClubManagement\\ClubManagement.csproj",
+        "packagesPath": "C:\\Users\\julib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\ClubManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julib\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,14 +28,14 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Datos\\Datos.csproj"
+              "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj"
               },
-              "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj"
+              "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj"
               },
-              "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Negocio\\Negocio.csproj": {
-                "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Negocio\\Negocio.csproj"
+              "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Negocio\\Negocio.csproj": {
+                "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Negocio\\Negocio.csproj"
               }
             }
           }
@@ -78,17 +78,17 @@
         }
       }
     },
-    "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Datos\\Datos.csproj": {
+    "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Datos\\Datos.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Datos\\obj\\",
+        "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj",
+        "packagesPath": "C:\\Users\\julib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julib\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,8 +102,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj"
+              "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj"
               }
             }
           }
@@ -147,17 +147,17 @@
         }
       }
     },
-    "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\julib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julib\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -208,17 +208,17 @@
         }
       }
     },
-    "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Negocio\\Negocio.csproj": {
+    "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Negocio\\Negocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Negocio\\Negocio.csproj",
+        "projectUniqueName": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Negocio\\Negocio.csproj",
         "projectName": "Negocio",
-        "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Negocio\\Negocio.csproj",
-        "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Negocio\\obj\\",
+        "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Negocio\\Negocio.csproj",
+        "packagesPath": "C:\\Users\\julib\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Negocio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\julib\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -232,11 +232,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Datos\\Datos.csproj"
+              "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Datos\\Datos.csproj"
               },
-              "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj": {
-                "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj"
+              "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj": {
+                "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj"
               }
             }
           }

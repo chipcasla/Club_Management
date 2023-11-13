@@ -19,7 +19,7 @@ namespace Datos
             List<Persona> personas = new List<Persona>();
 
             SqlConnection connection = Conexion.openConection();
-            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol=socio;";
+            string query = "SELECT dni, nombre, apellido, email FROM personas where rol='socio';";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -33,8 +33,8 @@ namespace Datos
                             reader["nombre"].ToString(),
                             reader["apellido"].ToString(),
                             reader["email"].ToString(),
-                            "",
-                            reader["rol"].ToString()
+                            null,
+                            null
                         );
                         personas.Add(persona);
                     }
@@ -51,7 +51,7 @@ namespace Datos
             List<Profesor> entrenadores = new List<Profesor>();
 
             SqlConnection connection = Conexion.openConection();
-            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol=entrenador;";
+            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol='entrenador';";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -106,14 +106,14 @@ namespace Datos
                             string mail = reader["email"].ToString();
                             string rol = reader["rol"].ToString();
 
-                            if(rol== "entrenador")
+                            if(rol == "entrenador")
                             {
                                 personaEncontrada = new Profesor(numDoc, nombre, apellido, mail, pass, rol);
                             } else
                             {
                                 personaEncontrada = new Persona(numDoc, nombre, apellido, mail, pass,rol);
                             }
-                            System.Diagnostics.Debug.WriteLine("BIEN");
+                            System.Diagnostics.Debug.WriteLine(personaEncontrada.getRol());
                         }
                     }
                     catch 

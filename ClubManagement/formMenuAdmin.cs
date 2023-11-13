@@ -16,5 +16,19 @@ namespace ClubManagement
         {
             InitializeComponent();
         }
+
+        private void btn_menu_salir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formLogin formIngreso = new formLogin();
+            formIngreso.ShowDialog();
+        }
+
+        private void btnSocios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formSocios formSocios = new formSocios();
+            formSocios.ShowDialog();
+        }
     }
 }

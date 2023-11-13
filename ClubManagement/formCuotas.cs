@@ -82,8 +82,8 @@ namespace ClubManagement
             formMenup.Show();
             this.Close();
         }
-        
-        
+
+
         public void FiltrarCuotasPorAño(int añoSeleccionado, Persona p)
         {
             ABMcuotas abmc = new ABMcuotas();
@@ -105,13 +105,14 @@ namespace ClubManagement
         }
         public void cbAnio_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbAnio.SelectedIndex != null) { 
-        
+            if (cbAnio.SelectedIndex != null)
+            {
+
                 FiltrarCuotasPorAño(int.Parse(cbAnio.SelectedItem.ToString()), persona);
             }
             else
             {
-                
+
                 MessageBox.Show("El año seleccionado no es válido.");
             }
         }

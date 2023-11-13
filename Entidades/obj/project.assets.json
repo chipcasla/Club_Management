@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Windows\\.nuget\\packages\\": {}
+    "C:\\Users\\julib\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\Entidades.csproj",
-      "packagesPath": "C:\\Users\\Windows\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows\\source\\repos\\Club_Management\\Club_Management\\Entidades\\obj\\",
+      "projectPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\Entidades.csproj",
+      "packagesPath": "C:\\Users\\julib\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\julib\\OneDrive\\Escritorio\\TP-NET\\Club_Management\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\julib\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

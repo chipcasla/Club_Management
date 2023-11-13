@@ -30,5 +30,10 @@ namespace Negocio
         {
             dp.deletePersona(dni);
         }
+
+        public List<Persona> obtenerSocios()
+        {
+            return dp.ObtenerSocios();
+        }
     }
 }
