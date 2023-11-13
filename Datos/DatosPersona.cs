@@ -19,7 +19,7 @@ namespace Datos
             List<Persona> personas = new List<Persona>();
 
             SqlConnection connection = Conexion.openConection();
-            string query = "SELECT dni, nombre, apellido, email FROM personas where rol='socio';";
+            string query = "SELECT dni, nombre, apellido, email FROM personas where rol='user';";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -33,8 +33,8 @@ namespace Datos
                             reader["nombre"].ToString(),
                             reader["apellido"].ToString(),
                             reader["email"].ToString(),
-                            null,
-                            null
+                            "",
+                            ""
                         );
                         personas.Add(persona);
                     }
@@ -51,7 +51,7 @@ namespace Datos
             List<Profesor> entrenadores = new List<Profesor>();
 
             SqlConnection connection = Conexion.openConection();
-            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol='entrenador';";
+            string query = "SELECT dni, nombre, apellido, email,rol FROM personas where rol='profesor';";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -277,6 +277,39 @@ namespace Datos
                     command.ExecuteNonQuery();
                 }
             }
+        }
+        public List<PersonaCuota> ObtenerSociosCuotas()
+        {
+            List<PersonaCuota> personas = new List<PersonaCuota>();
+
+            SqlConnection connection = Conexion.openConection();
+            string query = " SELECT p.DNI, p.Nombre, p.Apellido,p.email, COUNT(c.idCuota) as cuotasAsignadas,SUM(CASE WHEN c.pagado = 0 THEN c.monto ELSE 0 END) as montoTotal, SUM(CASE WHEN c.pagado = 0 THEN 1 ELSE 0 END) as debe FROM personas p LEFT JOIN cuotas c ON p.DNI = c.idSocio GROUP BY p.DNI, p.Nombre, p.Apellido, p.email;";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        PersonaCuota personaCuota = new PersonaCuota
+                        (
+                            int.Parse(reader["DNI"].ToString()),
+                            reader["nombre"].ToString(),
+                            reader["apellido"].ToString(),
+                            reader["email"].ToString(),
+                            int.Parse(reader["cuotasAsignadas"].ToString()),
+                            int.Parse(reader["debe"].ToString()),
+                            decimal.Parse(reader["montoTotal"].ToString())
+                        );
+                        personas.Add(personaCuota);
+
+                    }
+                }
+            }
+
+            Conexion.closeConnection(connection);
+
+            return personas;
         }
     }
 
