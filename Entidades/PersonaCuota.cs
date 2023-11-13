@@ -1,42 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Persona
+    public class PersonaCuota
     {
         int dni;
         String nombre;
         String apellido;
         String mail;
-        String password;
-        String rol;
+        int cuotasAsignadas;
+        int debe;
+        decimal montoDeuda;
 
-        public Persona()
-        {
-            this.dni = 1;
-            this.nombre = "";
-            this.apellido = "";
-            this.mail = "";
-            this.password = "";
-            this.rol = "";
-        }
-
-        public Persona(int dni, string nombre, string apellido, string mail, string password, string rol)
+        public PersonaCuota(int dni, string nombre, string apellido, string mail, int cuotasAsignadas, int debe, decimal montoDeuda)
         {
             this.dni = dni;
             this.nombre = nombre;
             this.apellido = apellido;
             this.mail = mail;
-            this.password = password;
-            this.rol = rol;
-        }
-        public string getRol()
-        {
-            return this.rol;
+            this.cuotasAsignadas = cuotasAsignadas;
+            this.debe = debe;
+            this.montoDeuda = montoDeuda;
         }
         public int getDni()
         {
@@ -55,10 +44,19 @@ namespace Entidades
         {
             return this.mail;
         }
-
-        public String getPassword()
+        public int getDebe()
         {
-            return this.password;
+            return this.debe;
         }
+
+        public decimal getMonto()
+        {
+            return this.montoDeuda;
+        }
+        public int getCuotasAsignadas()
+        {
+            return this.cuotasAsignadas;
+        }
+        
     }
 }

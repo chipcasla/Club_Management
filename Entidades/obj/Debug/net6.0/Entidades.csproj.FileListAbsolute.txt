@@ -58,3 +58,15 @@ C:\Users\julib\OneDrive\Escritorio\TP-NET\Club_Management\Entidades\obj\Debug\ne
 C:\Users\julib\OneDrive\Escritorio\TP-NET\Club_Management\Entidades\obj\Debug\net6.0\refint\Entidades.dll
 C:\Users\julib\OneDrive\Escritorio\TP-NET\Club_Management\Entidades\obj\Debug\net6.0\Entidades.pdb
 C:\Users\julib\OneDrive\Escritorio\TP-NET\Club_Management\Entidades\obj\Debug\net6.0\ref\Entidades.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\bin\Debug\net6.0\Entidades.deps.json
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\bin\Debug\net6.0\Entidades.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\bin\Debug\net6.0\Entidades.pdb
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\Entidades.AssemblyInfo.cs
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\Entidades.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\refint\Entidades.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\Entidades.pdb
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\Entidades\obj\Debug\net6.0\ref\Entidades.dll
