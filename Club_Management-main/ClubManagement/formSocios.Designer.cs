@@ -132,7 +132,7 @@
             // 
             // btnAtras
             // 
-            btnAtras.Location = new Point(46, 395);
+            btnAtras.Location = new Point(50, 422);
             btnAtras.Name = "btnAtras";
             btnAtras.Size = new Size(95, 40);
             btnAtras.TabIndex = 2;
@@ -142,23 +142,24 @@
             // 
             // txtDni
             // 
-            txtDni.Location = new Point(616, 403);
+            txtDni.Location = new Point(620, 430);
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(155, 27);
             txtDni.TabIndex = 3;
             // 
             // btnActualiza
             // 
-            btnActualiza.Location = new Point(792, 402);
+            btnActualiza.Location = new Point(796, 429);
             btnActualiza.Name = "btnActualiza";
             btnActualiza.Size = new Size(94, 29);
             btnActualiza.TabIndex = 4;
             btnActualiza.Text = "Actualizar";
             btnActualiza.UseVisualStyleBackColor = true;
+            btnActualiza.Click += btnActualiza_Click;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(896, 401);
+            btnEliminar.Location = new Point(900, 428);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(94, 29);
             btnEliminar.TabIndex = 5;
@@ -169,7 +170,7 @@
             // lblDni
             // 
             lblDni.AutoSize = true;
-            lblDni.Location = new Point(525, 406);
+            lblDni.Location = new Point(529, 433);
             lblDni.Name = "lblDni";
             lblDni.Size = new Size(85, 20);
             lblDni.TabIndex = 6;

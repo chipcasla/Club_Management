@@ -222,3 +222,4 @@ C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main
 C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.pdb
 C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.genruntimeconfig.cache
 C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\ClubManagement\obj\Debug\net6.0-windows\ref\ClubManagement.dll
+C:\Users\tomas\OneDrive\Escritorio\Club_Management-main (1)\Club_Management-main\ClubManagement\obj\Debug\net6.0-windows\ClubManagement.formActualizarSocio.resources

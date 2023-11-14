@@ -53,5 +53,10 @@ namespace Negocio
         {
             return dp.validarDuplicado(dni);
         }
+        public Persona buscaPersonaXDni(string dni)
+        {
+            return dp.getPersonaByDNI(dni);
+        }
+
     }
 }

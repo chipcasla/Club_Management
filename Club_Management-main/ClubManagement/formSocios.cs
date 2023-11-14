@@ -59,7 +59,7 @@ namespace ClubManagement
 
             if (result == DialogResult.Yes)
             {
-                        
+
                 ABMpersonas abmPersonas = new ABMpersonas();
                 int personaExiste = abmPersonas.buscaPersona(int.Parse(txtDni.Text));
                 if (personaExiste == 2)
@@ -67,14 +67,29 @@ namespace ClubManagement
                     abmPersonas.delete(txtDni.Text);
                     MessageBox.Show("Usuario eliminado con exito!");
                     this.Hide();
-                    formSocios formSoci= new formSocios();
+                    formSocios formSoci = new formSocios();
                     formSoci.Show();
                     this.Close();
                 }
                 else MessageBox.Show("No existe el dni ingresado.");
 
             }
-            
+
+        }
+
+        private void btnActualiza_Click(object sender, EventArgs e)
+        {
+
+            ABMpersonas abmPersonas = new ABMpersonas();
+            Persona personaExiste = abmPersonas.buscaPersonaXDni(txtDni.Text.ToString());
+            if (personaExiste != null)
+            {
+                this.Hide();
+                formActualizarSocio formAcySoc = new formActualizarSocio(personaExiste);
+                formAcySoc.Show();
+            }
+            else MessageBox.Show("No existe el dni ingresado.");
+
         }
     }
 }

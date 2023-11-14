@@ -237,8 +237,7 @@ namespace Datos
              
                     connection = Conexion.openConection();
 
-                    // Consulta SQL para buscar la persona por DNI y contraseña
-                    string query = "UPDATE personas SET nombre = @nombre, apellido = @apellido, mail = @mail, password = @password WHERE dni = @dni";
+                    string query = "UPDATE personas SET nombre = @nombre, apellido = @apellido, e1mail = @mail WHERE dni = @dni;";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -246,7 +245,7 @@ namespace Datos
                         command.Parameters.AddWithValue("@nombre", persona.getNombre());
                         command.Parameters.AddWithValue("@apellido", persona.getApellido());
                         command.Parameters.AddWithValue("@mail", persona.getMail());
-                        command.Parameters.AddWithValue("@password", persona.getPassword());
+                        
 
                         command.ExecuteNonQuery();
                     }
@@ -283,7 +282,7 @@ namespace Datos
             List<PersonaCuota> personas = new List<PersonaCuota>();
 
             SqlConnection connection = Conexion.openConection();
-            string query = " SELECT p.DNI, p.Nombre, p.Apellido,p.email, COUNT(c.idCuota) as cuotasAsignadas,SUM(CASE WHEN c.pagado = 0 THEN c.monto ELSE 0 END) as montoTotal, SUM(CASE WHEN c.pagado = 0 THEN 1 ELSE 0 END) as debe FROM personas p LEFT JOIN cuotas c ON p.DNI = c.idSocio GROUP BY p.DNI, p.Nombre, p.Apellido, p.email;";
+            string query = " SELECT p.DNI, p.Nombre, p.Apellido,p.email, COUNT(c.idCuota) as cuotasAsignadas,SUM(CASE WHEN c.pagado = 0 THEN c.monto ELSE 0 END) as montoTotal, SUM(CASE WHEN c.pagado = 0 THEN 1 ELSE 0 END) as debe FROM personas p LEFT JOIN cuotas c ON p.DNI = c.idSocio WHERE p.rol = 'user' GROUP BY p.DNI, p.Nombre, p.Apellido, p.email ;";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
